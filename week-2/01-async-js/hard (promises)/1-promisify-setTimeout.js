@@ -3,6 +3,15 @@
 */
 
 function wait(n) {
+    return new Promise((resolve,reject)=>{
+        if(n<0){
+            reject(new Error("Invalid seconds"))
+        }else{
+            setTimeout(()=>{
+                resolve()
+            },n*1000)
+        }
+    })
 }
 
 module.exports = wait;
